@@ -11,4 +11,7 @@ $ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # activate virtual environment
 $ .\myenv\Scripts\activate
+
+# activate using bash
+$ source myenv/Scripts/activate
 ```
