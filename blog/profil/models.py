@@ -7,7 +7,6 @@ class Jenis(models.Model):
     def _str_(self):
         return self.nama
 
-# Create your models here.
 class Barang(models.Model):
     kdbrg = models.CharField(max_length=8)
     nama = models.CharField(max_length=75)
@@ -19,3 +18,20 @@ class Barang(models.Model):
 
     def _str_(self):
         return self.nama
+
+class About(models.Model):
+    judul = models.CharField(max_length=200)
+    isi = models.TextField()
+    image = models.ImageField(upload_to='')
+
+    def __str__(self):
+        return self.judul
+
+class Project(models.Model):
+    category = models.CharField(max_length=20)
+    title = models.CharField(max_length=20)
+    project_link = models.CharField(max_length=200)
+    desc = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
