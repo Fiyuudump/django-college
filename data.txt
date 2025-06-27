@@ -1,0 +1,42 @@
+1.
+gallery: g-lamp.jpg
+image: lamp.jpg
+category: Frontend Design
+title: The Lamp
+desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+
+2.
+gallery: g-woodcraft.jpg
+image: woodcraft.jpg
+category: Frontend Design
+title: Wooocraft
+desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+
+3.
+gallery: g-corrugated-sheets.jpg
+image: corrugated-sheets.jpg
+category: Frontend Design
+title: Corrugated Sheets
+desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+
+4.
+gallery: g-oi-logo.jpg
+image: oi-logo.jpg
+category: Branding
+title: OI Logo
+desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+
+5.
+gallery: g-music-life.jpg
+image: music-life.jpg
+category: Frontend Design
+title: Music Life
+desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+
+6.
+gallery: g-red-wheel.jpg
+image: red-wheel.jpg
+category: Branding
+title: The Red Wheel
+desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+

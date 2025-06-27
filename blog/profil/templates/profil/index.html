@@ -317,9 +317,9 @@
                 <div class="column" data-aos="fade-up">
                     <div class="folio-item">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="{% static 'images/portfolio/gallery/g-lamp.jpg' %}"title="The Lamp" data-size="1050x700">
-                                <img src="{% static 'images/portfolio/lamp.jpg' %}"
-                                    srcset="{% static 'images/portfolio/lamp.jpg' %} 1x, {% static 'images/portfolio/lamp@2x.jpg' %} 2x" alt="">
+                            <a class="folio-item__thumb-link" href="{{ project.gallery.url }}"title="The Lamp" data-size="1050x700">
+                                <img src="{{ project.image.url }}"
+                                    srcset="{{ project.image.url }} 1x, {{ project.image.url }} 4x" alt="">
                             </a>
                         </div>
                         <div class="folio-item__info">
@@ -329,7 +329,6 @@
                         <a href="{{ project.project_link }}" title="Project Link" class="folio-item__project-link">Project Link</a>
                         <div class="folio-item__caption">
                             <p>{{ project.desc }}</p>
-                            <!-- <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p> -->
                         </div>
                     </div>
                 </div> <!-- end column -->

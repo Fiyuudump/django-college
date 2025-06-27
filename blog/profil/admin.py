@@ -31,7 +31,7 @@ class BarangAdmin(ModelAdmin):
     list_per_page=5
 
 class ProjectsAdmin(ModelAdmin):
-    list_display=['category', 'title', 'project_link', 'desc']
+    list_display=['category', 'title', 'project_link', 'desc', 'image']
     search_fields=['category', 'title']
     list_filter=('category', 'title')
     list_per_page=5

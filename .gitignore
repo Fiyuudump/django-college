@@ -188,3 +188,4 @@ cython_debug/
 .cursorindexingignore
 
 myenv
+blog/upload_file

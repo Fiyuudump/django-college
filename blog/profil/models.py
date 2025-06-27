@@ -32,6 +32,8 @@ class Projects(models.Model):
     title = models.CharField(max_length=20)
     project_link = models.CharField(max_length=200)
     desc = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='upload_file/', null=False, blank=False)
+    gallery = models.ImageField(upload_to='upload_file/', null=False, blank=False)
 
     def __str__(self):
         return self.title
