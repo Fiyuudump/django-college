@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from . models import Project
+from . models import Projects
 
 # Create your views here.
 def home(request):
-    project = Project.objects.first()
-    return render(request, 'profil/index.html', {'project': project})
+    projects = Projects.objects.all()
+    return render(request, 'profil/index.html', {'projects': projects})
 
 # def about(request):
 #     return render(request, 'profil/index.html')

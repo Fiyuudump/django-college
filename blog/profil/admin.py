@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Barang, Jenis, About, Project
+from . models import Barang, Jenis, About, Projects
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
@@ -27,11 +27,17 @@ class GroupAdmin(BaseGroupAdmin, ModelAdmin):
 class BarangAdmin(ModelAdmin):
     list_display=['kdbrg', 'nama', 'stok', 'harga', 'link_gambar', 'waktu_posting', 'jenis_id']
     search_fields=['kdbrg', 'nama', 'jenis_id__nama']
-    list_filter=('nama', 'jenis_id',)
+    list_filter=('nama', 'jenis_id')
+    list_per_page=5
+
+class ProjectsAdmin(ModelAdmin):
+    list_display=['category', 'title', 'project_link', 'desc']
+    search_fields=['category', 'title']
+    list_filter=('category', 'title')
     list_per_page=5
 
 admin.site.register(Barang, BarangAdmin)
 admin.site.register(Jenis)
 admin.site.register(About)
-admin.site.register(Project)
+admin.site.register(Projects, ProjectsAdmin)
 
