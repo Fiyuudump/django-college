@@ -63,7 +63,7 @@
                 <ul class="s-header__nav">
                     <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="About">About</a></li>
-                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
+                    {% comment %} <li><a class="smoothscroll" href="#services" title="Services">Services</a></li> {% endcomment %}
                     <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
                 </ul>
             </nav> <!-- end s-header__nav-wrap -->
@@ -95,6 +95,7 @@
                 <div class="s-hero__content-about">
 
                     <p>
+                    I'am Fiantyo, in my company, <br>
                     We are Flare. We love <br>
                     building great brands <br>
                     & digital experiences.
@@ -150,10 +151,7 @@
                 </h1>
 
                 <p class="lead" data-aos="fade-up">
-                    Non amet venenatis dolor id pellentesque mattis erat. Fermentum nunc,
-                    tincidunt sit elit amet scelerisque. Ac quisque quis eu nibh rutrum
-                    risus tellus egestas neque. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et.
+                    Flare is a creative branding agency shaping unique identities and immersive digital experiences. Driven by clarity and precision, we craft brand aesthetics with purpose and meaning. Rooted in strategy, we balance function with beauty—designing not just what looks good, but what feels right.
                 </p>
             </div>
 
@@ -166,37 +164,25 @@
             <div class="column item item-process" data-aos="fade-up">
                 <h3 class="item-title">Define</h3>
                 <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                We begin by uncovering your brand’s core purpose, voice, and audience. Through research and strategy, we define what makes you unique, ensuring every decision moving forward aligns with your values and long-term vision for meaningful impact.
                 </p>
             </div>
             <div class="column item item-process" data-aos="fade-up">
                 <h3 class="item-title">Design</h3>
                 <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                We craft visually compelling and emotionally resonant designs that reflect your brand’s essence. With precision and creativity, we design every element—logos, interfaces, assets—to engage your audience and elevate your presence across digital and physical spaces.
                 </p>
             </div>
             <div class="column item item-process" data-aos="fade-up">
                 <h3 class="item-title">Build</h3>
                 <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                We translate insights into structure, building the foundation of your brand’s ecosystem. From visual systems to messaging frameworks, we create the essential components needed for clarity, cohesion, and scalability across all platforms and touchpoints.
                 </p>
             </div>
             <div class="column item item-process" data-aos="fade-up">
                 <h3 class="item-title">Launch</h3>
                 <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                We prepare your brand for the world, executing with intention and impact. From digital rollout to brand activation, we ensure every touchpoint is aligned and optimized—transforming strategy and design into a launch-ready, future-facing experience.
                 </p>
             </div>
         </div>
@@ -204,7 +190,7 @@
     </section> <!-- end s-about -->
 
 
-    <!-- services
+    {% comment %} <!-- services
     ================================================== -->
     <section id="services" class="s-services">
 
@@ -293,13 +279,13 @@
             </div>
         </div>
 
-    </section> <!-- end s-services -->
+    </section> <!-- end s-services --> {% endcomment %}
 
     <section id="portfolio" class="s-portfolio">
 
         <div class="row s-porfolio__top">
             <div class="column large-6 w-900-stack">
-                <div class="section-title" data-num="03" data-aos="fade-up">
+                <div class="section-title" data-num="02" data-aos="fade-up">
                     <h3 class="h6">Recent Works</h3>
                 </div>
             </div>
@@ -319,7 +305,7 @@
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="{{ project.gallery.url }}"title="The Lamp" data-size="1050x700">
                                 <img src="{{ project.image.url }}"
-                                    srcset="{{ project.image.url }} 1x, {{ project.image.url }} 4x" alt="">
+                                    srcset="{{ project.image.url }} 1x, {{ project.image.url }} 2x" alt="">
                             </a>
                         </div>
                         <div class="folio-item__info">
@@ -378,11 +364,9 @@
                 <div class="testimonial-slider" data-aos="fade-up">
 
                     <div class="testimonial-slider__slide">
-                        <p>
-                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
-                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                        Laudantium quia consequatur molestias delectus culpa.
-                        </p>
+                        <p><i>
+                        "Flare doesn’t just design brands—they craft experiences with intention, simplicity, and elegance. Their approach is thoughtful and obsessively detail-oriented, which resonates with how we think at Apple."
+                        </i></p>
                         <div class="testimonial-slider__author">
                             <img src="{% static 'images/avatars/user-02.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
                             <cite class="testimonial-slider__cite">
@@ -393,11 +377,9 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonial-slider__slide">
-                        <p>
-                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                        Quasi voluptas eius distinctio. Atque eos maxime.
-                        </p>
+                        <p><i>
+                        "Working with Flare felt like collaborating with an extension of our own team. Their insight into digital behavior and user-centric design aligns perfectly with the way we build at Google."
+                        </i></p>
                         <div class="testimonial-slider__author">
                             <img src="{% static 'images/avatars/user-01.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
                             <cite class="testimonial-slider__cite">
@@ -408,11 +390,9 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonial-slider__slide">
-                        <p>
-                        Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                        Voluptatem dignissimos ut.
-                        </p>
+                        <p><i>
+                        "Flare’s ability to merge clarity with creativity is impressive. They help brands articulate their vision in a way that is both inspiring and grounded in real-world impact—something essential in today’s evolving landscape."
+                        </i></p>
                         <div class="testimonial-slider__author">
                             <img src="{% static 'images/avatars/user-04.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
                             <cite class="testimonial-slider__cite">
@@ -423,11 +403,9 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonial-slider__slide">
-                        <p>
-                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis
-                        quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit.
-                        Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                        </p>
+                        <p><i>
+                        "Flare brings a rare blend of strategic thinking and creative precision. They understand how to scale ideas without losing their soul—something we value deeply at Amazon."
+                        </i></p>
                         <div class="testimonial-slider__author">
                             <img src="{% static 'images/avatars/user-05.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
                             <cite class="testimonial-slider__cite">
