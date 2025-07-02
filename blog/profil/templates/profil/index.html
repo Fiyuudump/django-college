@@ -63,7 +63,7 @@
                 <ul class="s-header__nav">
                     <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="About">About</a></li>
-                    {% comment %} <li><a class="smoothscroll" href="#services" title="Services">Services</a></li> {% endcomment %}
+                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
                     <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
                 </ul>
             </nav> <!-- end s-header__nav-wrap -->
@@ -103,10 +103,10 @@
 
                     <footer>
                         <div class="s-hero__content-social">
-                            <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                            {% for social_media in social_medias %}
+                                <a href="{{ social_media.link }}"><i class="fab fa-{{ social_media.icon }}" aria-hidden="true"></i></a>
+                            {% empty %}
+                            {% endfor %}
                         </div>
                     </footer>
                 </div>
@@ -161,36 +161,19 @@
         </div>
 
         <div class="row block-large-1-2 block-tab-full s-about__process item-list">
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Define</h3>
-                <p>
-                We begin by uncovering your brand’s core purpose, voice, and audience. Through research and strategy, we define what makes you unique, ensuring every decision moving forward aligns with your values and long-term vision for meaningful impact.
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Design</h3>
-                <p>
-                We craft visually compelling and emotionally resonant designs that reflect your brand’s essence. With precision and creativity, we design every element—logos, interfaces, assets—to engage your audience and elevate your presence across digital and physical spaces.
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Build</h3>
-                <p>
-                We translate insights into structure, building the foundation of your brand’s ecosystem. From visual systems to messaging frameworks, we create the essential components needed for clarity, cohesion, and scalability across all platforms and touchpoints.
-                </p>
-            </div>
-            <div class="column item item-process" data-aos="fade-up">
-                <h3 class="item-title">Launch</h3>
-                <p>
-                We prepare your brand for the world, executing with intention and impact. From digital rollout to brand activation, we ensure every touchpoint is aligned and optimized—transforming strategy and design into a launch-ready, future-facing experience.
-                </p>
-            </div>
+            {% for about in abouts %}
+                <div class="column item item-process" data-aos="fade-up">
+                    <h3 class="item-title">{{ about.title }}</h3>
+                    <p>{{ about.desc }}</p>
+                </div>
+            {% empty %}
+            {% endfor %}
         </div>
 
     </section> <!-- end s-about -->
 
 
-    {% comment %} <!-- services
+    <!-- services
     ================================================== -->
     <section id="services" class="s-services">
 
@@ -202,90 +185,36 @@
             </div>
             <div class="column large-6 w-900-stack">
                 <h1 class="display-1" data-aos="fade-up">
-                    Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                    Quis dolores totam voluptatibus.
+                    Flare is a creative branding agency crafting meaningful digital worlds.
+                    We blend strategy with stunning aesthetics.
                 </h1>
             </div>
             <div class="column large-6 w-900-stack">
                 <p class="lead" data-aos="fade-up">
-                Velit deleniti harum sit beatae sint repellendus expedita. Omnis possimus
-                sed rerum tenetur ea ab aut minima magnam. Deserunt sit cupiditate
-                similique eveniet earum. Consectetur dolores maxime quisquam voluptate magni.
-                Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                    Our team designs immersive experiences and visual identities that stand out.
+                    We balance logic and beauty to build brands that feel as good as they look.
                 </p>
             </div>
         </div>
 
         <div class="row block-large-1-2 block-tab-full s-services__services item-list">
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--product-design"></span>
-                <h3 class="item-title">Product Design</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--branding"></span>
-                <h3 class="item-title">Branding</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--frontend"></span>
-                <h3 class="item-title">Frontend Development</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--research"></span>
-                <h3 class="item-title">UX Research</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--illustration"></span>
-                <h3 class="item-title">Illustration</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
-            <div class="column item item-service" data-aos="fade-up">
-                <span class="service-icon service-icon--ecommerce"></span>
-                <h3 class="item-title">E-Commerce</h3>
-                <p>
-                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque.
-                Quis dolores totam voluptatibus molestiae non. Quae exercitationem
-                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod
-                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
-                </p>
-            </div>
+            {% for service in services %}
+                <div class="column item item-service" data-aos="fade-up">
+                    <span class="service-icon service-icon--{{ service.css_icon }}"></span>
+                    <h3 class="item-title">{{ service.title }}</h3>
+                    <p>{{ service.desc }}</p>
+                </div>
+            {% empty %}
+            {% endfor %}
         </div>
 
-    </section> <!-- end s-services --> {% endcomment %}
+    </section> <!-- end s-services -->
 
     <section id="portfolio" class="s-portfolio">
 
         <div class="row s-porfolio__top">
             <div class="column large-6 w-900-stack">
-                <div class="section-title" data-num="02" data-aos="fade-up">
+                <div class="section-title" data-num="03" data-aos="fade-up">
                     <h3 class="h6">Recent Works</h3>
                 </div>
             </div>
@@ -344,14 +273,10 @@
             <div class="column">
                 <div class="clients" data-aos="fade-up">
 
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/dropbox.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/atom.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/github.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/redhat.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/medium.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/messenger.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/steam.svg' %}"/></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/icons/clients/spotify.svg' %}"/></a>
+                    {% for client in clients %}
+                        <a href="{{ client.link }}" title="" class="clients__slide"><img src="{{ client.icon.url }}"/></a>
+                    {% empty %}
+                    {% endfor %}
 
                 </div> <!-- end clients -->
             </div> <!-- end column -->
@@ -363,57 +288,19 @@
 
                 <div class="testimonial-slider" data-aos="fade-up">
 
-                    <div class="testimonial-slider__slide">
-                        <p><i>
-                        "Flare doesn’t just design brands—they craft experiences with intention, simplicity, and elegance. Their approach is thoughtful and obsessively detail-oriented, which resonates with how we think at Apple."
-                        </i></p>
-                        <div class="testimonial-slider__author">
-                            <img src="{% static 'images/avatars/user-02.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Tim Cook</strong>
-                                <span>CEO, Apple</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonial-slider__slide">
-                        <p><i>
-                        "Working with Flare felt like collaborating with an extension of our own team. Their insight into digital behavior and user-centric design aligns perfectly with the way we build at Google."
-                        </i></p>
-                        <div class="testimonial-slider__author">
-                            <img src="{% static 'images/avatars/user-01.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Sundar Pichai</strong>
-                                <span>CEO, Google</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonial-slider__slide">
-                        <p><i>
-                        "Flare’s ability to merge clarity with creativity is impressive. They help brands articulate their vision in a way that is both inspiring and grounded in real-world impact—something essential in today’s evolving landscape."
-                        </i></p>
-                        <div class="testimonial-slider__author">
-                            <img src="{% static 'images/avatars/user-04.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Satya Nadella</strong>
-                                <span>CEO, Microsoft</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonial-slider__slide">
-                        <p><i>
-                        "Flare brings a rare blend of strategic thinking and creative precision. They understand how to scale ideas without losing their soul—something we value deeply at Amazon."
-                        </i></p>
-                        <div class="testimonial-slider__author">
-                            <img src="{% static 'images/avatars/user-05.jpg' %}"alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Jeff Bezos</strong>
-                                <span>CEO, Amazon</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
+                    {% for testimonial in testimonials %}
+                        <div class="testimonial-slider__slide">
+                            <p><i>{{ testimonial.say }}</i></p>
+                            <div class="testimonial-slider__author">
+                                <img src="{{ testimonial.author_img.url }}" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>{{ testimonial.author }}</strong>
+                                    <span>{{ testimonial.job_title }}</span>
+                                </cite>
+                            </div>
+                        </div> <!-- end testimonials__slide -->
+                    {% empty %}
+                    {% endfor %}
 
                 </div> <!-- end testimonial slider -->
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Barang, Jenis, About, Projects
+from . models import About, Client, Projects, Service, SocialMedia, Testimonial
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
@@ -23,12 +23,7 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
 class GroupAdmin(BaseGroupAdmin, ModelAdmin):
     pass
 
-
-class BarangAdmin(ModelAdmin):
-    list_display=['kdbrg', 'nama', 'stok', 'harga', 'link_gambar', 'waktu_posting', 'jenis_id']
-    search_fields=['kdbrg', 'nama', 'jenis_id__nama']
-    list_filter=('nama', 'jenis_id')
-    list_per_page=5
+# ----------------------------------------------------------------
 
 class ProjectsAdmin(ModelAdmin):
     list_display=['category', 'title', 'project_link', 'desc', 'image']
@@ -36,8 +31,40 @@ class ProjectsAdmin(ModelAdmin):
     list_filter=('category', 'title')
     list_per_page=5
 
-admin.site.register(Barang, BarangAdmin)
-admin.site.register(Jenis)
-admin.site.register(About)
+class AboutAdmin(ModelAdmin):
+    list_display=['title', 'desc']
+    search_fields=['title']
+    list_filter=('title', 'desc')
+    list_per_page=4
+
+class ServiceAdmin(ModelAdmin):
+    list_display=['title', 'desc', 'css_icon']
+    search_fields=['title']
+    list_filter=('title', 'desc')
+    list_per_page=6
+
+class SocialMediaAdmin(ModelAdmin):
+    list_display=['link', 'icon']
+    search_fields=['link']
+    list_filter=('link', 'icon')
+    list_per_page=4
+
+class ClientAdmin(ModelAdmin):
+    list_display=['link', 'icon']
+    search_fields=['link']
+    list_filter=('link',)
+    list_per_page=8
+
+class TestimonialAdmin(ModelAdmin):
+    list_display=['say', 'author_img', 'author', 'job_title']
+    search_fields=['author']
+    list_filter=('author', 'job_title')
+    list_per_page=3
+
+admin.site.register(About, AboutAdmin)
+admin.site.register(Service, ServiceAdmin)
 admin.site.register(Projects, ProjectsAdmin)
+admin.site.register(SocialMedia, SocialMediaAdmin)
+admin.site.register(Client, ClientAdmin)
+admin.site.register(Testimonial, TestimonialAdmin)
 

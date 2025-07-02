@@ -3,40 +3,40 @@ gallery: g-lamp.jpg
 image: lamp2x.jpg
 category: Frontend Design
 title: The Lamp
-desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+desc: Where clean UI meets luminous creativity—The Lamp sets the perfect mood for any interface with light-driven aesthetics that shine across every pixel.
 
 2.
 gallery: g-woodcraft.jpg
 image: woodcraft2x.jpg
 category: Frontend Design
 title: Wooocraft
-desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+desc: Built for modern crafters of the web—Wooocraft blends dynamic layouts and tactile design to elevate your frontend experience to artisan levels.
 
 3.
 gallery: g-corrugated-sheets.jpg
 image: corrugated-sheets2x.jpg
 category: Frontend Design
 title: Corrugated Sheets
-desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+desc: Inspired by industrial form and function, Corrugated Sheets delivers rugged, layered UI structures ideal for bold digital statements and scalable designs.
 
 4.
 gallery: g-oi-logo.jpg
 image: oi-logo2x.jpg
 category: Branding
 title: OI Logo
-desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+desc: Minimal yet magnetic—OI Logo captures brand essence with a bold mark that sparks recognition and trust across every touchpoint.
 
 5.
 gallery: g-music-life.jpg
 image: music-life2x.jpg
 category: Frontend Design
 title: Music Life
-desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+desc: Designed to pulse with rhythm—Music Life delivers an immersive audiovisual frontend with beat-responsive elements and melodic UI harmony.
 
 6.
 gallery: g-red-wheel.jpg
 image: red-wheel2x.jpg
 category: Branding
 title: The Red Wheel
-desc: Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+desc: Roll out a revolution in identity—The Red Wheel symbolizes momentum, power, and bold change, making your brand unforgettable.
 

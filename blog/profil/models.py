@@ -1,31 +1,18 @@
 from django.db import models
 
-class Jenis(models.Model):
-    nama = models.CharField(max_length=20)
-    deskripsi = models.TextField()
-
-    def _str_(self):
-        return self.nama
-
-class Barang(models.Model):
-    kdbrg = models.CharField(max_length=8)
-    nama = models.CharField(max_length=75)
-    stok = models.IntegerField()
-    harga = models.BigIntegerField()
-    link_gambar = models.CharField(max_length=150, blank=True)
-    waktu_posting = models.DateTimeField(auto_now_add=True)
-    jenis_id = models.ForeignKey(Jenis, on_delete=models.CASCADE, null=True)
-
-    def _str_(self):
-        return self.nama
-
 class About(models.Model):
-    judul = models.CharField(max_length=200)
-    isi = models.TextField()
-    image = models.ImageField(upload_to='')
+    title = models.CharField(max_length=200)
+    desc = models.TextField()
 
     def __str__(self):
-        return self.judul
+        return self.title
+class Service(models.Model):
+    title = models.CharField(max_length=200)
+    desc = models.TextField()
+    css_icon = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.title
 
 class Projects(models.Model):
     category = models.CharField(max_length=20)
@@ -37,3 +24,26 @@ class Projects(models.Model):
 
     def __str__(self):
         return self.title
+
+class SocialMedia(models.Model):
+    link = models.CharField(max_length=200)
+    icon = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.icon
+
+class Client(models.Model):
+    link = models.CharField(max_length=200)
+    icon = models.FileField(upload_to='upload_file/', null=False, blank=False)
+
+    def __str__(self):
+        return self.link
+
+class Testimonial(models.Model):
+    say = models.TextField()
+    author_img = models.ImageField(upload_to='upload_file/', null=False, blank=False)
+    author = models.CharField(max_length=50)
+    job_title = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.author
