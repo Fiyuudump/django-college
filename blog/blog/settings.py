@@ -25,8 +25,13 @@ SECRET_KEY = 'django-insecure-(t+eoo#o^wwbn*c*3tieuq_^93hrcrbqk$oc9(8k!ayn9kpe!g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.free.pinggy.link",
+    "https://*.trycloudflare.com",
+    "https://*.pythonanywhere.com",
+]
 
 # Application definition
 
@@ -334,4 +339,3 @@ UNFOLD = {
 #         "success": "btn-success"
 #     }
 # }
-
