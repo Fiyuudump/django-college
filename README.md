@@ -71,6 +71,52 @@ $ py manage.py createsuperuser
   # at your ../your_project/settings.py
   python manage.py collectstatic
   ```
+
+
+  If you got error template not found for structure folder like below, please add this some configuration :
+  ```bash
+  /home/yourusername/galang-porto/
+  ├── manage.py
+  ├── galang_porto/
+  │   ├── views.py
+  │   ├── settings.py
+  │   └── ...
+  └── templates/
+      └── index.html
+  ```
+
+  add this configuration please :
+  ```python
+  ...
+
+  import os
+
+  BASE_DIR_V2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # add this line
+
+  TEMPLATES = [
+    {
+      'BACKEND': 'django.template.backends.django.DjangoTemplates',
+      'DIRS': [os.path.join(BASE_DIR_V2, 'templates')], # from 'DIRS': ['templates']
+      # or using absolute path like below :
+      # 'DIRS': ['/home/yourusername/galang-porto/templates']
+      'APP_DIRS': True,
+      'OPTIONS': { ... },
+    },
+  ]
+
+  ...
+  ```
+
+  In your `views.py` file no need to adjust again:
+  ```python
+  ...
+
+  def home(request):
+    return render(request, 'index.html', context)
+
+  ...
+  ```
+
 2 setup pythonanywhere's Web (`source code`, `WSGI configuration file`, `Virtualenv`, `Static files`)
 - setup the source code
 
@@ -113,4 +159,12 @@ $ py manage.py createsuperuser
   # to
 
   URL: /static/   →   Directory: /home/tyo/django-college/blog/staticfiles
+  ```
+  and if the css not included by `$ python manage.py collectstatic`'s command before, add the raw `static` folder absolute path. example :
+  ```txt
+  URL: <your_static_url>   →   Directory: <your_absolute_raw_static_folder>
+
+  # to
+
+  URL: /static/   →   Directory: /home/tyo/django-college/blog/static
   ```
